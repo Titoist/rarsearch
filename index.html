@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rar search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+       .search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.center-container {
+    text-align: center;
+}
+
+.search-bar {
+    width: 300px; /* Set your desired width */
+    padding: 10px;
+    font-size: 16px;
+}
+logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.center-container {
+    text-align: center;
+}
+.logo {
+    width: 800px; /* Set your desired width */
+    height: auto;
+}
+    </style>
+</head>
+
+<body> 
+    <a href="https://gmail.com/" class="top-left-link">gmail</a>
+     <a href="https://yahoomail.com/" class="top-left-link">yahoo mail</a>
+     <a href="https://microsoft.com/" class="top-left-link">microsoft</a>
+    <div class="center-container">
+   <img src="untitled.png" alt="logo" class="logo"/>
+   <div class="centre-container"/>
+        <form id="search-form">
+        <select id="search-engine">
+            <option value="https://www.google.com/search">Google</option>
+            <option value="https://www.bing.com/search">Bing</option>
+            <option value="https://www.yahoo.com/search">Yahoo</option>
+        </select>
+        <input type="text" id="search-query" placeholder="Enter your search query...">
+        <input type="button" value="Search" onclick="performSearch()">
+    </form>
+
+    <div id="search-btn"></div>
+
+    <script>
+        function performSearch() {
+            var searchEngine = document.getElementById("search-engine").value;
+            var query = document.getElementById("search-query").value;
+            var searchUrl = searchEngine + "?q=" + encodeURIComponent(query);
+            // Open the search results in a new tab/window
+            window.open(searchUrl, "_blank");
+        }
+    </script>
+  <b1>thanks to use our site!!!!</b1>
+</body>
+
