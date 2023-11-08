@@ -8,6 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Example SQL query: INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password');
   
   // Redirect to a confirmation page or login page
-  header("Location: registration-successful.html");
+  header("Location: index.html");
 }
 ?>
