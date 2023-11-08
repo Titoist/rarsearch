@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Email App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .email-list {
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 300px;
+        }
+
+        .email {
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .email:hover {
+            background-color: #f0f0f0;
+        }
+
+        .email-content {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Email App</h1>
+    <div class="email-list" id="email-list">
+        <!-- Emails will be displayed here -->
+    </div>
+    <div class="email-content" id="email-content">
+        <!-- Email content will be displayed here -->
+    </div>
+
+    <script>
+        const emails = [
+            { id: 1, sender: 'example@example.com', subject: 'Hello', body: 'How are you?' },
+            { id: 2, sender: 'john@example.com', subject: 'Meeting', body: 'Let\'s meet at 2 PM.' },
+            // Add more emails as needed
+        ];
+
+        const emailList = document.getElementById('email-list');
+        const emailContent = document.getElementById('email-content');
+
+        function displayEmails() {
+            emailList.innerHTML = '';
+            emails.forEach(email => {
+                const emailDiv = document.createElement('div');
+                emailDiv.className = 'email';
+                emailDiv.innerText = `From: ${email.sender}\nSubject: ${email.subject}`;
+                emailDiv.addEventListener('click', () => displayEmailContent(email));
+                emailList.appendChild(emailDiv);
+            });
+        }
+
+        function displayEmailContent(email) {
+            emailContent.innerHTML = `<strong>From:</strong> ${email.sender}<br><strong>Subject:</strong> ${email.subject}<br><br>${email.body}`;
+        }
+
+        // Initial display
+        displayEmails();
+    </script>
+</body>
+</html>
