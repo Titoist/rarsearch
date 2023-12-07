@@ -109,6 +109,31 @@ logo {
             window.open(searchUrl, "_blank");
         }
     </script>
+       <script>
+        // Function to reload the page after a specified interval (e.g., 1 minute)
+        function autoRefresh() {
+            setTimeout(function(){
+                location.reload();
+            }, 60000); // 60000 milliseconds = 1 minute
+        }
+        // Call the autoRefresh function when the page loads
+        window.onload = autoRefresh;
+    </script>
+</head>
+<body>
+
+<!-- News Bar -->
+<div id="news-bar">
+    <marquee behavior="scroll" direction="left">
+        News Headline 1 | News Headline 2 | News Headline 3
+        <!-- Add more news headlines as needed -->
+    </marquee>
+</div>
+
+<h1>Latest News</h1>
+
+<!-- Your news articles go here -->
+
        <div>
        <footer><p>this site was made by Rar-Mat</p></footer>
        </div>
