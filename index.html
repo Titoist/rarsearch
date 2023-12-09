@@ -86,8 +86,25 @@
             width: 100vw;
             height: 100vh;
             border: none;
-        }     
-    </style>
+        } 
+        /* Style for the button */
+        .search-button {
+            background-color: #4CAF50; /* Green background color */
+            border: none; /* Remove borders */
+            color: white; /* White text color */
+            padding: 10px 20px; /* Add padding */
+            text-align: center; /* Center text */
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        /* Style for the button image */
+        .search-icon {
+            width: 20px; /* Adjust image width */
+            height: 20px; /* Adjust image height */
+            margin-right: 5px; /* Add margin to separate image from text */
+        }
     </style>
 </head>
 
@@ -135,6 +152,9 @@
     </script>
 </head>
 <body>
+   <!-- Search button with image -->
+    <button class="search-button">
+        <img src="search-icon.png" alt="Search Icon" class="search-icon"> 
 
 <!-- News Bar -->
 <div id="news-bar">
